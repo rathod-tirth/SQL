@@ -30,7 +30,7 @@
       - drop
       - truncate
 
-   1. **Create :** It is used to create a new table or database.
+   1. `create :` It is used to create a new table or database.
       
       ```SQL
       CREATE DATABASE database_name;
@@ -45,7 +45,7 @@
       - column_name and datatype is required to create a new column
       - by default if not mentioned, column is given null constraint
 
-   2. **Alter :** It is used to add, modify or delete existing attribute in a table.
+   2. **alter :** It is used to add, modify or delete existing attribute in a table.
 
       - Add column :
       
@@ -78,8 +78,21 @@
       DROP TABLE table_name;
       ```
    
-   4. **Truncate :** It is used to delete all the rows or data form the table.
+   4. **Truncate :** It is used to delete all the rows or data from the table.
 
       ```SQL
       TRUNCATE TABLE table_name;
       ```
+
+2. **DML - Data Manipulation Language :**
+
+   - DML commands are used to modify the database. It is responsible for all form of changes in the database.
+
+   - The command of DML is not auto-committed that means it can't permanently save all the changes in the database. They can be rollback.
+
+   - **DML Commands :**
+      - insert
+      - update
+      - delete
+
+   1. **insert :** It is used to insert data into the row of a table.
