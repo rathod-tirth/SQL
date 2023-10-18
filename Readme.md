@@ -30,7 +30,7 @@
       - drop
       - truncate
 
-   1. `create :` It is used to create a new table or database.
+   1. `create` : It is used to create a new table or database.
       
       ```SQL
       CREATE DATABASE database_name;
@@ -45,7 +45,7 @@
       - column_name and datatype is required to create a new column
       - by default if not mentioned, column is given null constraint
 
-   2. **alter :** It is used to add, modify or delete existing attribute in a table.
+   2. `alter` : It is used to add, modify or delete existing attribute in a table.
 
       - Add column :
       
@@ -70,7 +70,7 @@
          DROP class;
          ```
 
-   3. **Drop :** It is used to delete both the structure and record stored in the table.
+   3. `drop` : It is used to delete both the structure and record stored in the table.
 
       ```SQL
       DROP DATABASE database_name;
@@ -78,7 +78,7 @@
       DROP TABLE table_name;
       ```
    
-   4. **Truncate :** It is used to delete all the rows or data from the table.
+   4. `truncate` : It is used to delete all the rows or data from the table.
 
       ```SQL
       TRUNCATE TABLE table_name;
@@ -95,4 +95,4 @@
       - update
       - delete
 
-   1. **insert :** It is used to insert data into the row of a table.
+   1. `insert` : It is used to insert data into the row of a table.
