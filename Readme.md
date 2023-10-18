@@ -1,11 +1,11 @@
-## SQL - Structured Query Language
+# SQL - Structured Query Language
 
-### Types of Data Types :
+## Data Types :
 - **INT :** numeric value only
 - **TEXT :** string and numeric value
 - **VARCHAR(0) :** both numeric and string with limited characters
    
-### Types of constraint :-
+## Constraint :
 
 - **NOT NULL :** should not be empty
 - **UNIQUE :** should not repeat
@@ -15,11 +15,11 @@
 - FOREIGN KEY
 - INDEX
 
-### Types of SQL Commands :
+## SQL Commands :
 
 ![SQL Command Chart](https://static.javatpoint.com/dbms/images/dbms-sql-command.png)
 
-1. **DDL - Data Defination Language :**
+1. ### DDL - Data Defination Language :
    - DDL changes the structure of the table like creating a table, deleting a table, altering a table, etc.
 
    - All the command of DDL are auto-committed that means it permanently save all the changes in the database.
@@ -84,7 +84,7 @@
       TRUNCATE TABLE table_name;
       ```
 
-2. **DML - Data Manipulation Language :**
+2. ### DML - Data Manipulation Language :
 
    - DML commands are used to modify the database. It is responsible for all form of changes in the database.
 
