@@ -54,7 +54,7 @@
          ADD class VARCHAR(2);
          ```
          
-         `ADD column_name datatype constraint`
+         - `ADD column_name datatype constraint`
 
       - Modify column:
          
@@ -63,7 +63,7 @@
          MODIFY class VARCHAR(2) not null;
          ```
 
-         `MODIFY column_name datatype constraint`
+         - `MODIFY column_name datatype constraint`
          - when you modify a column you re-assign the datatype and constraint of the column, so if you want one of them to be as it is, make sure to rewrite.
 
       - Delete column:
