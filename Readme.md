@@ -1,15 +1,15 @@
 ## SQL - Structured Query Language
 
 ### Types of Data Types :
-- **int :** numeric value only
-- **text :** string value only
-- **varchar(0) :** both numeric and string with limitation characters
+- **INT :** numeric value only
+- **TEXT :** string and numeric value
+- **VARCHAR(0) :** both numeric and string with limited characters
    
 ### Types of constraint :-
 
 - **NOT NULL :** should not be empty
 - **UNIQUE :** should not repeat
-- DEFAULT
+- **DEFAULT :** gives column a default value
 - CHECK
 - **PRIMARY KEY :** combination of not null and unique
 - FOREIGN KEY
@@ -25,12 +25,12 @@
    - All the command of DDL are auto-committed that means it permanently save all the changes in the database.
 
    - **DDL Commands :**
-      - create
-      - alter
-      - drop
-      - truncate
+      - CREATE
+      - ALTER
+      - DROP
+      - TRUNCATE
 
-   1. `create` : It is used to create a new table or database.
+   1. **CREATE :** It is used to create a new table or database.
       
       ```SQL
       CREATE DATABASE database_name;
@@ -45,7 +45,7 @@
       - column_name and datatype is required to create a new column
       - by default if not mentioned, column is given null constraint
 
-   2. `alter` : It is used to add, modify or delete existing attribute in a table.
+   2. **ALTER :** It is used to add, modify or delete existing attribute in a table.
 
       - Add column :
       
@@ -70,7 +70,7 @@
          DROP class;
          ```
 
-   3. `drop` : It is used to delete both the structure and record stored in the table.
+   3. **DROP :** It is used to delete both the structure and record stored in the table.
 
       ```SQL
       DROP DATABASE database_name;
@@ -78,7 +78,7 @@
       DROP TABLE table_name;
       ```
    
-   4. `truncate` : It is used to delete all the rows or data from the table.
+   4. **TRUNCATE :** It is used to delete all the rows or data from the table.
 
       ```SQL
       TRUNCATE TABLE table_name;
@@ -91,8 +91,48 @@
    - The command of DML is not auto-committed that means it can't permanently save all the changes in the database. They can be rollback.
 
    - **DML Commands :**
-      - insert
-      - update
-      - delete
+      - INSERT
+      - UPDATE
+      - DELETE
 
-   1. `insert` : It is used to insert data into the row of a table.
+   1. **INSERT :** It is used to insert data into the row of a table.
+
+      ```SQL
+      -- without order
+      INSERT INTO student VALUES 
+      (1, "Tirth", "Gujarat", 9618642687, 10);
+
+      -- with order
+      INSERT INTO student (id, address, class, name) VALUES 
+      (9, "Gujarat", "X", "Tirth");
+      ```
+
+      - Without order you have to write the exact amount of column with exact placement of the column
+
+      - With order you can ommit columns and also set a different placement of the data.
+
+      - Note: That with order you only change the way it takes the data and the table itself.
+
+   2. **UPDATE :** This command is used to update or modify the value of a column in the table.
+
+      ```SQL
+      UPDATE student
+      SET name="Vaibhav"
+      WHERE id=4;
+
+      UPDATE student
+      SET phone=9874135843
+      WHERE id=9;
+      ```
+      - `WHERE` is a used for adding condition statement
+
+      - You can update the value as long as the row exist.
+      
+      - In the second example row with id 9 exist but phone value is null, but still you can update the value.
+
+   3. **DELETE :** It is used to remove one or more row from a table.
+
+      ```SQL
+      DELETE FROM student
+      WHERE id=6;
+      ```
