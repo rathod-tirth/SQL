@@ -33,7 +33,7 @@
    1. **Create :** It is used to create a new table or database.
       
       ```SQL
-      CREATE database database_name;
+      CREATE DATABASE database_name;
 
       CREATE TABLE table_name(
       id INT PRIMARY KEY
@@ -58,7 +58,7 @@
          
          ```SQL
          ALTER TABLE table_name
-         MODIFY class VARCHAR(2) not null;
+         MODIFY class VARCHAR(2) NOT NULL;
          ```
 
          - when you modify a column you re-assign the datatype and constraint of the column, so if you want one of them to be as it is, make sure to rewrite.
@@ -73,13 +73,13 @@
    3. **Drop :** It is used to delete both the structure and record stored in the table.
 
       ```SQL
-      drop database database_name;
-      
-      drop table table_name;
+      DROP DATABASE database_name;
+
+      DROP TABLE table_name;
       ```
    
    4. **Truncate :** It is used to delete all the rows or data form the table.
 
       ```SQL
-      truncate table table_name;
+      TRUNCATE TABLE table_name;
       ```
