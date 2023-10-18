@@ -3,6 +3,7 @@
 	multiline comment
 */
 
+-- DDL: Data Defination Language
 -- DDL commands: create alter drop truncate
 
 -- create --
@@ -34,4 +35,8 @@ drop class;
 -- delete column
 
 -- drop --
+drop database school;
 drop table student;
+
+-- truncate --
+truncate table student;
