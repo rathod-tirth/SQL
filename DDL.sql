@@ -34,6 +34,9 @@ alter table student
 drop class;
 -- delete column
 
+alter table student
+modify class varchar(3) not null;
+
 -- drop --
 drop database school;
 drop table student;

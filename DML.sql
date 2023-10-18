@@ -58,10 +58,12 @@ update student
 set phone=9874135843
 where id=9;
 
+update student
+set name="Dev"
+where name="Dev55";
+
 -- delete --
 
 delete from student
 where id=6;
-
-select * from student;
 

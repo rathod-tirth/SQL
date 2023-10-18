@@ -15,6 +15,37 @@
 - FOREIGN KEY
 - INDEX
 
+## Operator :
+
+- **Arithmetic Operators :** 
+   - Addition (+)
+   - Subtraction (-)
+   - Multiplication (*)
+   - Division (/)
+   - Modulus (%)
+   
+- **Comparison Operators :**
+   - Equal (=)
+   - Not Equal (!=)
+   - Greater Than (>)
+   - Greater Than Equals to (>=)
+   - Less Than (<)
+   - Less Than Equals to (<=)
+
+- **Logical Operators :**
+   - ALL
+   - AND
+   - OR
+   - BETWEEN
+   - IN
+   - NOT
+   - ANY
+   - LIKE
+
+- Set Operators
+- Bit-wise Operators
+- Unary Operators
+
 ## SQL Commands :
 
 ![SQL Command Chart](https://static.javatpoint.com/dbms/images/dbms-sql-command.png)
@@ -136,3 +167,23 @@
       DELETE FROM student
       WHERE id=6;
       ```
+
+3. ### DQL - Data Query Language :
+
+   - DQL is used to fetch the data from the database.
+
+   - **DQL commands :** SELECT
+
+   - **SELECT :** It is used to select the attribute based on the condition described by WHERE clause.
+
+      ```SQL
+      SELECT expressions FROM TABLES    
+      WHERE conditions;
+
+      SELECT name FROM student
+      WHERE address="Odhav";
+      ```
+
+      - For condition we can use comparison and logical operators.
+
+      - Comparison Ops: =, >, <, >=, <=
