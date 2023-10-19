@@ -33,14 +33,22 @@
    - Less Than Equals to (<=)
 
 - **Logical Operators :**
-   - ALL
-   - AND
-   - OR
-   - BETWEEN
-   - IN
-   - NOT
-   - ANY
-   - LIKE
+
+   - **ALL :** The ALL operator in SQL compares the specified value to all the values of a column from the sub-query in the SQL database.
+
+   - **AND :** The AND operator in SQL would show the record from the database table if all the conditions separated by the AND operator evaluated to True.
+
+   - **OR :** The OR operator in SQL shows the record from the table if any of the conditions separated by the OR operator evaluates to True.
+
+   - **BETWEEN :** The BETWEEN operator in SQL shows the record within the range mentioned in the SQL query. This operator operates on the numbers, characters, and date/time operands.
+
+   - **IN :** The IN operator in SQL allows database users to specify two or more values in a WHERE clause. This logical operator minimizes the requirement of multiple OR conditions.
+
+   - **NOT :** The NOT operator in SQL shows the record from the table if the condition evaluates to false.
+
+   - **ANY :** The ANY operator in SQL shows the records when any of the values returned by the sub-query meet the condition.
+   
+   - **LIKE :** The LIKE operator in SQL shows those records from the table which match with the given pattern specified in the sub-query. The percentage (%) sign is a wildcard which is used in conjunction with this logical operator.
 
 - Set Operators
 - Bit-wise Operators
