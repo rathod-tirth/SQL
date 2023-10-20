@@ -191,10 +191,11 @@
       SELECT name FROM student
       WHERE address="Odhav";
       ```
-
+      
       - For conditions use operators.
+
+      - We can give alias to a column.
 
       ```SQL
       SELECT marks/100*100 AS Percentage FROM student;
       ```
-      - We can give alias to a column.
