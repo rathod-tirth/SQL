@@ -192,6 +192,9 @@
       WHERE address="Odhav";
       ```
 
-      - For condition we can use comparison and logical operators.
+      - For conditions use operators.
 
-      - Comparison Ops: =, >, <, >=, <=
+      ```SQL
+      SELECT marks/100*100 AS Percentage FROM student;
+      ```
+      - We can give alias to a column.
