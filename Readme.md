@@ -26,33 +26,33 @@
    
 - **Comparison Operators :**
    - Equal (=)
-   - Not Equal (!=)
+   - Not Equal (!= or <>)
    - Greater Than (>)
    - Greater Than Equals to (>=)
+   - Greater Than or not Equals to (!>)
    - Less Than (<)
    - Less Than Equals to (<=)
+   - Less Than or not Equals to (!<)
 
 - **Logical Operators :**
 
-   - **ALL :** The ALL operator in SQL compares the specified value to all the values of a column from the sub-query in the SQL database.
+   - **ALL :** It compares a value to all values in another value set.
 
    - **AND :** The AND operator in SQL would show the record from the database table if all the conditions separated by the AND operator evaluated to True.
 
    - **OR :** The OR operator in SQL shows the record from the table if any of the conditions separated by the OR operator evaluates to True.
 
-   - **BETWEEN :** The BETWEEN operator in SQL shows the record within the range mentioned in the SQL query. This operator operates on the numbers, characters, and date/time operands.
+   - **BETWEEN :** The BETWEEN operator in SQL shows the record within the range mentioned in the SQL query.
 
    - **IN :** The IN operator in SQL allows database users to specify two or more values in a WHERE clause. This logical operator minimizes the requirement of multiple OR conditions.
 
-   - **NOT :** The NOT operator in SQL shows the record from the table if the condition evaluates to false.
+   - **NOT :** It reverses the meaning of any logical operator.
 
    - **ANY :** The ANY operator in SQL shows the records when any of the values returned by the sub-query meet the condition.
+
+   - **EXISTS :** It is used to search for the presence of a row in a specified table.
    
    - **LIKE :** The LIKE operator in SQL shows those records from the table which match with the given pattern specified in the sub-query. The percentage (%) sign is a wildcard which is used in conjunction with this logical operator.
-
-- Set Operators
-- Bit-wise Operators
-- Unary Operators
 
 ## SQL Commands :
 
@@ -191,11 +191,30 @@
       SELECT name FROM student
       WHERE address="Odhav";
       ```
-      
-      - For conditions use operators.
 
-      - We can give alias to a column.
+      - Give alias name to column
 
       ```SQL
       SELECT marks/100*100 AS Percentage FROM student;
       ```
+
+## Aggretate Functions :
+
+- SQL aggregation function is used to perform the calculations on multiple rows of a single column of a table. It returns a single value.
+
+- Types of Aggretate Function :
+   - Count
+   - Sum
+   - Avg
+   - Max
+   - Min
+
+1. **Count :** It is used to Count the number of rows in a database table.
+
+2. **Sum :** Sum function is used to calculate the sum of all selected columns. It works on numeric fields only.
+
+3. **Avg :** The AVG function is used to calculate the average value of the numeric type. AVG function returns the average of all non-Null values.
+
+4. **Max :** It is used to find the maximum value of a certain column.
+
+5. **Min :** It is used to find the minimum value of a certain column.
