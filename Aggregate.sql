@@ -9,7 +9,7 @@ select count(*) as Marks
 from student
 where marks=90;
 
---- sum
+-- sum
 select sum(marks) from student;
 
 select sum(marks) as Total
