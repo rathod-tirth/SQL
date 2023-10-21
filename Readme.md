@@ -211,10 +211,34 @@
 
 1. **Count :** It is used to Count the number of rows in a database table.
 
+   ```SQL
+   SELECT COUNT(*) FROM student;
+
+   SELECT COUNT(*) AS Marks
+   FROM student
+   WHERE marks=90;
+   ```
+
 2. **Sum :** Sum function is used to calculate the sum of all selected columns. It works on numeric fields only.
+
+   ```SQL
+   SELECT SUM(marks) FROM student;
+   ```
 
 3. **Avg :** The AVG function is used to calculate the average value of the numeric type. AVG function returns the average of all non-Null values.
 
+   ```SQL
+   SELECT AVG(marks) FROM student;
+   ```
+
 4. **Max :** It is used to find the maximum value of a certain column.
 
+   ```SQL
+   SELECT MAX(marks) FROM student;
+   ```
+
 5. **Min :** It is used to find the minimum value of a certain column.
+
+   ```SQL
+   SELECT MIN(marks) FROM student;
+   ```
