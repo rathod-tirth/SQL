@@ -203,13 +203,8 @@
 - SQL aggregation function is used to perform the calculations on multiple rows of a single column of a table. It returns a single value.
 
 - Types of Aggretate Function :
-   - Count
-   - Sum
-   - Avg
-   - Max
-   - Min
 
-1. **Count :** It is used to Count the number of rows in a database table.
+1. **COUNT :** It is used to Count the number of rows in a database table.
 
    ```SQL
    SELECT COUNT(*) FROM student;
@@ -219,26 +214,74 @@
    WHERE marks=90;
    ```
 
-2. **Sum :** Sum function is used to calculate the sum of all selected columns. It works on numeric fields only.
+2. **SUM :** Sum function is used to calculate the sum of all selected columns. It works on numeric fields only.
 
    ```SQL
    SELECT SUM(marks) FROM student;
    ```
 
-3. **Avg :** The AVG function is used to calculate the average value of the numeric type. AVG function returns the average of all non-Null values.
+3. **AVG :** The AVG function is used to calculate the average value of the numeric type. AVG function returns the average of all non-Null values.
 
    ```SQL
    SELECT AVG(marks) FROM student;
    ```
 
-4. **Max :** It is used to find the maximum value of a certain column.
+4. **MAX :** It is used to find the maximum value of a certain column.
 
    ```SQL
    SELECT MAX(marks) FROM student;
    ```
 
-5. **Min :** It is used to find the minimum value of a certain column.
+5. **MIN :** It is used to find the minimum value of a certain column.
 
    ```SQL
    SELECT MIN(marks) FROM student;
+   ```
+
+## Scalar Functions :
+
+- Scalar functions are used to perform operation on string.
+
+- Types of scalar functions :
+
+1. **UCASE :** This function will change the case of the string to upper case characters.
+
+   ```SQL
+   SELECT UCASE(name) AS upper_case
+   FROM student;
+   ```
+
+2. **LCASE :** This function will change the case of the string to lower case characters.
+
+   ```SQL
+   SELECT LCASE(name) AS lower_case
+   FROM student;
+   ```
+
+3. **MID :** This function is used to extract substrings from the table's column.
+
+   ```SQL
+   SELECT MID(name,1,3) AS mid_case
+   FROM student;  
+   ```
+
+4. **LENGTH :** This function returns the length of the string in the column.
+
+   ```SQL
+   SELECT LENGTH(name) AS length
+   FROM student;
+   ```
+
+5. **ROUND :** This function is used to round a numeric column to the number of decimals specified.
+
+   ```SQL
+   SELECT ROUND(marks)
+   FROM student;
+   ```
+
+6. **NOW :** This function returns the current system' date and time.
+
+   ```SQL
+   SELECT NOW()
+   FROM student;
    ```
