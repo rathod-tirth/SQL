@@ -432,3 +432,45 @@
    DROP PROCEDURE s_marks;
    ```
 
+## Cursor :
+
+- An explicit cursor holds multiple records but processes a single row at a time. It uses the pointer, which moves to another row after reading one row.
+
+- Life Cycle of Cursor :
+
+   1. **Declare Cursor**
+   2. **Open Cursor**
+   3. **Fetch Cursor**
+   4. **Close Cursor**
+
+   ```SQL
+
+   DELIMITER $$
+   CREATE PROCEDURE s_class()
+   BEGIN
+
+   DECLARE c_name TEXT;
+   DECLARE c_marks INT;
+   DECLARE is_done INT DEFAULT 0;
+   DECLARE c_marks CURSOR FOR SELECT name,marks FROM student;
+
+   DECLARE CONTINUE HANDLER FOR NOT FOUND SET is_done=1;
+
+   OPEN c_marks;
+
+   get_data:LOOP
+
+   FETCH c_marks INTO c_name, c_marks;
+   SELECT c_name,c_marks;
+   IF is_done=1
+      THEN leave get_data;
+   END IF;
+
+   END LOOP get_data;
+
+   CLOSE c_marks;
+   END $$
+   DELIMITER ;
+
+   CALL s_class;
+   ```
