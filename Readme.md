@@ -438,10 +438,13 @@
 
 - Life Cycle of Cursor :
 
-   1. **Declare Cursor**
-   2. **Open Cursor**
-   3. **Fetch Cursor**
-   4. **Close Cursor**
+1. **Declare Cursor**
+
+2. **Open Cursor**
+
+3. **Fetch Cursor**
+
+4. **Close Cursor**
 
    ```SQL
 
