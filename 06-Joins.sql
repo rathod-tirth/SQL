@@ -25,7 +25,7 @@ select s.id,m.roll,s.name,s.class,m.total from student as s left join marksheet 
 -- right join
 select s.id,m.roll,s.name,s.class,m.total from student as s right join marksheet as m on s.id=m.roll;
 
--- full outer join
+-- full join
 select s.id,m.roll,s.name,s.class,m.total from student as s right join marksheet as m on s.id=m.roll
 union
 select s.id,m.roll,s.name,s.class,m.total from student as s left join marksheet as m on s.id=m.roll;
