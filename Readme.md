@@ -198,6 +198,45 @@
       SELECT marks/100*100 AS Percentage FROM student;
       ```
 
+4. ### DCL - Data Control Language :
+
+   - DCL commands are used to grant and take back authority from any database user.
+
+   - **DCL commands :**
+
+      - GRANT
+      - REVOKE
+
+   1. **GRANT :**  It is used to give user access privileges to a database.
+
+      ```SQL
+      GRANT INSERT, UPDATE ON student TO user_1;
+      ```
+
+   2. **REVOKE :** It is used to take back permissions from the user.
+
+      ```SQL
+      REVOKE INSERT ON student TO user_1;
+      ```
+
+5. ### TCL - Transaction Control Language :
+
+   - TCL commands can only use with DML commands like INSERT, DELETE and UPDATE only.
+
+   - These operations are automatically committed in the database that's why they cannot be used while creating tables or dropping them.
+
+   - **TCL commands :**
+
+      - COMMIT
+      - ROLLBACK
+      - SAVEPOINT
+
+   1. **COMMIT :** Commit command is used to save all the transactions to the database.
+
+   2. **ROLLBACK :** Rollback command is used to undo transactions that have not already been saved to the database.
+
+   3. **SAVEPOINT :** It is used to roll the transaction back to a certain point without rolling back the entire transaction.
+
 ## Aggretate Functions :
 
 - SQL aggregation function is used to perform the calculations on multiple rows of a single column of a table. It returns a single value.
@@ -476,4 +515,21 @@ END $$
 DELIMITER ;
 
 CALL s_class;
+```
+
+## Trigger :
+
+- It is a special type of stored procedure that is invoked automatically in response to an event.
+
+- `(BEFOR | AFTER) (INSERT | UPDATE | DELETE) ON table_name`
+
+```SQL
+CREATE TRIGGER sum
+BEFORE INSERT
+ON marksheet
+FOR EACH ROW
+
+BEGIN
+   SET NEW.total = NEW.marks1 + NEW.marks2;
+END  
 ```
