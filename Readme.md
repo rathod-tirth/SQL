@@ -10,10 +10,9 @@
 - **NOT NULL :** should not be empty
 - **UNIQUE :** should not repeat
 - **DEFAULT :** gives column a default value
-- CHECK
+- **CHECK :** Check constraint is validation or a rule which is applied on the column of a table.
 - **PRIMARY KEY :** combination of not null and unique
-- FOREIGN KEY
-- INDEX
+- **FOREIGN KEY :** A foreign key is a field or a column that is used to establish a link between two tables.
 
 ## Operator :
 
