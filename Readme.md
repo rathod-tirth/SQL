@@ -341,94 +341,83 @@
 
 - We can invoke the procedures by using triggers, other procedures and applications such as Java, Python, PHP, etc.
 
-   ```SQL
-   DELIMITER &&  
-   CREATE PROCEDURE procedure_name (parameter_type parameter_name datatype, ...)    
-   BEGIN    
-
-      CODE   
-
-   END &&  
-   DELIMITER ;   
-   ```
-
 - **Calling a Stored Procedure :** We can use the CALL statement to call a stored procedure.
 
    ```SQL
-   CALL procedure_name ( parameter/s )  
+   CALL s_marks( parameters )  
    ```
 
 - **Types of SQL parameters :**
 
-   - **No parameter :**
+1. **No parameter :**
 
-      ```SQL
-      DELIMITER $$
-      CREATE PROCEDURE s_marks()
-      BEGIN
-      
-      SELECT name, marks, class FROM student;
-      SELECT math, sci, total FROM marksheet;
+   ```SQL
+   DELIMITER $$
+   CREATE PROCEDURE s_marks()
+   BEGIN
+   
+   SELECT name, marks, class FROM student;
+   SELECT math, sci, total FROM marksheet;
 
-      END $$
-      DELIMITER ;
+   END $$
+   DELIMITER ;
 
-      CALL s_marks();
-      ```
+   CALL s_marks();
+   ```
 
-   - **IN parameter :** It is the default mode. It takes a parameter as input, such as an attribute. When we define it, the calling program has to pass an argument to the stored procedure. This parameter's value is always protected.
+2. **IN parameter :** It is the default mode. It takes a parameter as input, such as an attribute. When we define it, the calling program has to pass an argument to the stored procedure. This parameter's value is always protected.
 
-      ```SQL
-      DELIMITER $$
-      CREATE PROCEDURE s_marks(IN id INT)
-      BEGIN
-      
-      SELECT * FROM student AS s
-      WHERE s.id = id;
-      
-      END $$
-      DELIMITER ;
+   ```SQL
+   DELIMITER $$
+   CREATE PROCEDURE s_marks(IN id INT)
+   BEGIN
+   
+   SELECT * FROM student AS s
+   WHERE s.id = id;
+   
+   END $$
+   DELIMITER ;
 
-      CALL s_marks(1);
-      ```   
+   CALL s_marks(1);
+   ```   
 
-   - **OUT parameter :** It is used to pass a parameter as output. Its value can be changed inside the stored procedure, and the changed (new) value is passed back to the calling program. It is noted that a procedure cannot access the OUT parameter's initial value when it starts.
+3. **OUT parameter :** It is used to pass a parameter as output. Its value can be changed inside the stored procedure, and the changed (new) value is passed back to the calling program. It is noted that a procedure cannot access the OUT parameter's initial value when it starts.
 
-      ```SQL
-      DELIMITER $$
-      CREATE PROCEDURE s_marks(OUT total INT)
-      BEGIN
-      
-      SELECT marks INTO total FROM student
-      WHERE id=1;
-      
-      END $$
-      DELIMITER ;
+   ```SQL
+   DELIMITER $$
+   CREATE PROCEDURE s_marks(OUT total INT)
+   BEGIN
+   
+   SELECT marks INTO total FROM student
+   WHERE id=1;
+   
+   END $$
+   DELIMITER ;
 
-      CALL s_marks(@T);
+   CALL s_marks(@T);
 
-      select @T;
-      ```  
+   select @T;
+   ```  
 
-   - **INOUT parameter :** It is a combination of IN and OUT parameters. It means the calling program can pass the argument, and the procedure can modify the INOUT parameter, and then passes the new value back to the calling program.
+4. **INOUT parameter :** It is a combination of IN and OUT parameters. It means the calling program can pass the argument, and the procedure can modify the INOUT parameter, and then passes the new value back to the calling program.
 
-      ```SQL
-      DELIMITER $$
-      CREATE PROCEDURE s_marks3(INOUT var INT)
-      BEGIN
+   ```SQL
+   DELIMITER $$
+   CREATE PROCEDURE s_marks3(INOUT var INT)
+   BEGIN
 
-      SELECT marks INTO var FROM student
-      WHERE id=var;
+   SELECT marks INTO var FROM student
+   WHERE id=var;
 
-      END $$
-      DELIMITER ;
+   END $$
+   DELIMITER ;
 
-      SET @V=1;
+   SET @V=1;
 
-      CALL s_marks3(@V);
+   CALL s_marks3(@V);
 
-      SELECT @V;
-      ```
+   SELECT @V;
+   ```
 
 - **Show Procedure :** This statement displays all stored procedure names, including their characteristics.
 
@@ -443,4 +432,3 @@
    DROP PROCEDURE s_marks;
    ```
 
-   
